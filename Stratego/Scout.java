@@ -1,17 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Scout here.
+ * Write a description of class Miner here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Scout extends Piece
+public class Miner extends Piece
 {
     /**
-     * Act - do whatever the Scout wants to do. This method is called whenever
+     * Act - do whatever the Miner wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Miner()
+    {
+    }
+    public Miner(int rank, boolean color)
+    {
+        super(rank, color);
+    }
     public void act() 
     {
         // Add your action code here.
