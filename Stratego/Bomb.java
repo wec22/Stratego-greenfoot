@@ -12,6 +12,13 @@ public class Bomb extends Piece
      * Act - do whatever the Bomb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+     public Bomb()
+    {
+    }
+    public Bomb(int rank, boolean color)
+    {
+        super(rank, color);
+    }
     public void act() 
     {
         // Add your action code here.
