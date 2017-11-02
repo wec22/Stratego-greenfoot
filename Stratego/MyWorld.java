@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private boolean turn;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -176,5 +176,16 @@ public class MyWorld extends World
         }
         
     }
+<<<<<<< HEAD
    
+=======
+    public void changeTurns()
+    {
+        turn = !turn;
+    }
+    public boolean getTurn()
+    {
+        return turn;
+    }
+>>>>>>> 78909621ece4ad060d2486cef509f932a9e9b897
 }
