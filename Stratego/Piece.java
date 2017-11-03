@@ -14,6 +14,7 @@ public class Piece extends Actor
      */
     private int rank;
     private boolean color;
+    private GreenfootImage pieceImage;
     public Piece()
     {
     }
@@ -21,6 +22,76 @@ public class Piece extends Actor
     {
         rank = number;
         color = side;
+        if(side)
+        {
+            switch(rank)
+            {
+                 case(1):
+                        pieceImage = new GreenfootImage("red1.png");
+                        setImage(pieceImage);
+                        break;
+                case(2):
+                        pieceImage = new GreenfootImage("red2.png");
+                        setImage(pieceImage);
+                        break;
+               case(3):
+                        pieceImage = new GreenfootImage("red3.png");
+                        setImage(pieceImage);
+                        break;
+                case(4):
+                        pieceImage = new GreenfootImage("red4.png");
+                        setImage(pieceImage);
+
+                case(5):
+                        pieceImage = new GreenfootImage("red5.png");
+                        setImage(pieceImage);
+                        break;
+                case(6):
+                        pieceImage = new GreenfootImage("red6.png");
+                        setImage(pieceImage);
+                        break;
+                case(7):
+                        pieceImage =new GreenfootImage("red7.png");
+                        setImage(pieceImage);
+                        break;
+                
+            }
+        }
+        else
+        {
+            switch(rank)
+            {
+                 case(1):
+                        pieceImage = new GreenfootImage("blue1.png");
+                        setImage(pieceImage);
+                        break;
+                case(2):
+                        pieceImage = new GreenfootImage("blue2.png");
+                        setImage(pieceImage);
+                        break;
+               case(3):
+                        pieceImage = new GreenfootImage("blue3.png");
+                        setImage(pieceImage);
+                        break;
+                case(4):
+                        pieceImage = new GreenfootImage("blue4.png");
+                        setImage(pieceImage);
+
+                case(5):
+                        pieceImage = new GreenfootImage("blue5.png");
+                        setImage(pieceImage);
+                        break;
+                case(6):
+                        pieceImage = new GreenfootImage("blue6.png");
+                        setImage(pieceImage);
+                        break;
+                case(7):
+                        pieceImage =new GreenfootImage("blue7.png");
+                        setImage(pieceImage);
+                        break;
+                
+            }
+        }
     }
     public void act() 
     {
