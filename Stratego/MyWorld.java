@@ -176,9 +176,6 @@ public class MyWorld extends World
         }
         
     }
-<<<<<<< HEAD
-   
-=======
     public void changeTurns()
     {
         turn = !turn;
@@ -187,5 +184,4 @@ public class MyWorld extends World
     {
         return turn;
     }
->>>>>>> 78909621ece4ad060d2486cef509f932a9e9b897
 }
