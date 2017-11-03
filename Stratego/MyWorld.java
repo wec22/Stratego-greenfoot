@@ -13,9 +13,9 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-  
+    //temporary array that fills up with randomly placed soldiers
     private int orderedPair;
-    private boolean SpawnLocationBoard[][] = new boolean[10][4];  //temporary array that fills up with randomly placed soldiers
+    private boolean SpawnLocationBoard[][] = new boolean[10][4];
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -169,21 +169,16 @@ public class MyWorld extends World
             if(board[xLocation][yLocation] != true)
             {
                 board[xLocation][yLocation] = true;
-                xLocation = (xLocation * 10) + 4; //changes from single digit location of array to 2 digit location in board grid
+                xLocation = (xLocation * 10) + 5; //changes from single digit location of array to 2 digit location in board grid
                 yLocation = (yLocation * 10) + 5;
                 orderedPair = (xLocation * 100)+yLocation; //combines the x and y location into 1 value to be passed back
                 return orderedPair;
             }
         }
         
-    }
-<<<<<<< HEAD
-   
+    }   
 
     public void changeTurns()
-=======
-public void changeTurns()
->>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
     {
         turn = !turn;
     }

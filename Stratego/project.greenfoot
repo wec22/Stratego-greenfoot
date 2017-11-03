@@ -1,6 +1,10 @@
 #Greenfoot properties
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Fri Nov 03 12:00:20 CDT 2017
+=======
+#Fri Nov 03 13:08:45 CDT 2017
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 #Fri Nov 03 13:08:45 CDT 2017
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -14,7 +18,11 @@ readme.y=10
 dependency3.type=UsesDependency
 readme.x=10
 <<<<<<< HEAD
+<<<<<<< HEAD
 target4.name=Bomb
+=======
+target4.name=Cell
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 target4.name=Cell
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -27,23 +35,32 @@ target5.type=ClassTarget
 target3.typeParameters=
 dependency4.from=MyWorld
 <<<<<<< HEAD
+<<<<<<< HEAD
 mainWindow.width=1936
 dependency4.type=UsesDependency
 target2.width=80
 target5.name=Cell
 target9.typeParameters=
 =======
+=======
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 mainWindow.width=1932
 dependency4.type=UsesDependency
 target2.width=80
 target5.name=Flag
+<<<<<<< HEAD
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
+=======
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 class.Flag.image=gold-ball.png
 version=3.0.0
 class.Scout.image=rocket.png
 target6.type=ClassTarget
 <<<<<<< HEAD
+<<<<<<< HEAD
 class.River.image=River.png
+=======
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 class.Cell.superclass=
@@ -61,8 +78,12 @@ dependency3.to=Spy
 target3.showInterface=false
 class.Spy.image=tux.png
 <<<<<<< HEAD
+<<<<<<< HEAD
 class.River.superclass=greenfoot.Actor
 target6.name=Flag
+=======
+target6.name=Spy
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 target6.name=Spy
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -74,6 +95,7 @@ target1.showInterface=false
 target5.showInterface=false
 dependency6.to=Piece
 <<<<<<< HEAD
+<<<<<<< HEAD
 target9.y=0
 target7.type=ClassTarget
 target6.width=80
@@ -84,11 +106,16 @@ dependency7.to=River
 dependency6.from=MyWorld
 package.numTargets=9
 =======
+=======
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 target7.type=ClassTarget
 target6.width=80
 target6.height=50
 dependency6.from=MyWorld
 package.numTargets=8
+<<<<<<< HEAD
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
+=======
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 target8.y=0
 target8.x=0
@@ -99,7 +126,11 @@ target1.type=ClassTarget
 target7.y=0
 target7.x=0
 <<<<<<< HEAD
+<<<<<<< HEAD
 target7.name=Spy
+=======
+target7.name=MyWorld
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 target7.name=MyWorld
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -118,10 +149,15 @@ target4.y=0
 target4.x=0
 class.Miner.superclass=Piece
 <<<<<<< HEAD
+<<<<<<< HEAD
 dependency7.from=MyWorld
 target3.y=0
 target3.x=0
 dependency7.type=UsesDependency
+=======
+target3.y=0
+target3.x=0
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 target3.y=0
 target3.x=0
@@ -131,9 +167,15 @@ target2.y=0
 target2.x=0
 class.MyWorld.superclass=greenfoot.World
 <<<<<<< HEAD
+<<<<<<< HEAD
 mainWindow.y=-8
 mainWindow.x=-8
 target8.name=MyWorld
+=======
+mainWindow.y=0
+mainWindow.x=-8
+target8.name=Scout
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 mainWindow.y=0
 mainWindow.x=-8
@@ -144,7 +186,11 @@ dependency1.from=MyWorld
 target5.width=80
 target1.y=0
 <<<<<<< HEAD
+<<<<<<< HEAD
 editor.fx.0.height=1167
+=======
+editor.fx.0.height=1047
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 editor.fx.0.height=1047
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -154,8 +200,12 @@ readme.height=58
 target2.name=Piece
 readme.name=@README
 <<<<<<< HEAD
+<<<<<<< HEAD
 target9.type=ClassTarget
 package.numDependencies=7
+=======
+package.numDependencies=6
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 package.numDependencies=6
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
@@ -164,13 +214,17 @@ class.Flag.superclass=Piece
 target3.type=ClassTarget
 target4.width=80
 <<<<<<< HEAD
+<<<<<<< HEAD
 target9.name=Scout
+=======
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 =======
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 dependency2.from=MyWorld
 dependency2.type=UsesDependency
 target5.typeParameters=
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 <<<<<<< HEAD
 mainWindow.height=1176
 target2.showInterface=false
@@ -184,6 +238,8 @@ class.Bomb.superclass=Piece
 target3.width=80
 project.charset=UTF-8
 =======
+=======
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 mainWindow.height=1056
 target2.showInterface=false
 target3.name=Bomb
@@ -193,6 +249,9 @@ class.Piece.image=ball.png
 class.Bomb.superclass=Piece
 project.charset=UTF-8
 target3.width=80
+<<<<<<< HEAD
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
+=======
 >>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
 class.MyWorld.image=tiledGrass.png
 target4.showInterface=false
