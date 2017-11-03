@@ -13,41 +13,7 @@ public class Piece extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int rank;
-    private boolean color;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    private boolean color;    
     
     
     public Piece()
