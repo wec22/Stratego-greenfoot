@@ -21,8 +21,7 @@ public class Miner extends Piece
         blue = new GreenfootImage("blue8.png");
         if(color)
             setImage(red);
-        else
-            setImage(blue);            
+                   
     }
     public void act() 
     {

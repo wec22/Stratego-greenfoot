@@ -59,38 +59,8 @@ public class Piece extends Actor
         }
         else
         {
-            switch(rank)
-            {
-                 case(1):
-                        pieceImage = new GreenfootImage("blue1.png");
-                        setImage(pieceImage);
-                        break;
-                case(2):
-                        pieceImage = new GreenfootImage("blue2.png");
-                        setImage(pieceImage);
-                        break;
-               case(3):
-                        pieceImage = new GreenfootImage("blue3.png");
-                        setImage(pieceImage);
-                        break;
-                case(4):
-                        pieceImage = new GreenfootImage("blue4.png");
-                        setImage(pieceImage);
-
-                case(5):
-                        pieceImage = new GreenfootImage("blue5.png");
-                        setImage(pieceImage);
-                        break;
-                case(6):
-                        pieceImage = new GreenfootImage("blue6.png");
-                        setImage(pieceImage);
-                        break;
-                case(7):
-                        pieceImage =new GreenfootImage("blue7.png");
-                        setImage(pieceImage);
-                        break;
-                
-            }
+            pieceImage = new GreenfootImage("blueBlank.png");
+            setImage(pieceImage);
         }
     }
     public void act() 

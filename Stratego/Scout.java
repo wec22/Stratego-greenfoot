@@ -24,8 +24,7 @@ public class Scout extends Piece
         blue = new GreenfootImage("blue9.png");
         if(color)
             setImage(red);
-        else
-            setImage(blue);        
+         
     }
     public void act() 
     {

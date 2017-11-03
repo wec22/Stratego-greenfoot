@@ -24,8 +24,7 @@ public class Spy extends Piece
         blue = new GreenfootImage("blueSpy.png");
         if(color)
             setImage(red);
-        else
-            setImage(blue);        
+              
     }
     public void act() 
     {

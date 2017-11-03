@@ -24,8 +24,7 @@ public class Bomb extends Piece
         blue = new GreenfootImage("blueBomb.png");
         if(color)
             setImage(red);
-        else
-            setImage(blue);        
+               
     }
     public void act() 
     {
