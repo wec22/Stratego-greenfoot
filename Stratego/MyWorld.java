@@ -13,9 +13,9 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    //temporary array that fills up with randomly placed soldiers
+  
     private int orderedPair;
-    private boolean SpawnLocationBoard[][] = new boolean[10][4];
+    private boolean SpawnLocationBoard[][] = new boolean[10][4];  //temporary array that fills up with randomly placed soldiers
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -29,7 +29,8 @@ public class MyWorld extends World
          --------------*/
         orderedPair = getRandomLocationPair(SpawnLocationBoard);
         addObject(new Flag(11, true), (orderedPair/100), (orderedPair%100));//adds flag
-
+        addObject(new River(), 50, 50);
+        setPaintOrder(Piece.class, River.class, MyWorld.class);
         for(int i= 0; i < 6; i++)//add bombs
         {
             orderedPair = getRandomLocationPair(SpawnLocationBoard);
@@ -168,7 +169,7 @@ public class MyWorld extends World
             if(board[xLocation][yLocation] != true)
             {
                 board[xLocation][yLocation] = true;
-                xLocation = (xLocation * 10) + 5; //changes from single digit location of array to 2 digit location in board grid
+                xLocation = (xLocation * 10) + 4; //changes from single digit location of array to 2 digit location in board grid
                 yLocation = (yLocation * 10) + 5;
                 orderedPair = (xLocation * 100)+yLocation; //combines the x and y location into 1 value to be passed back
                 return orderedPair;
@@ -178,8 +179,11 @@ public class MyWorld extends World
     }
 <<<<<<< HEAD
    
-=======
+
     public void changeTurns()
+=======
+public void changeTurns()
+>>>>>>> b2e49a415d45c201a59923c45a1a7174642278bb
     {
         turn = !turn;
     }
@@ -187,5 +191,5 @@ public class MyWorld extends World
     {
         return turn;
     }
->>>>>>> 78909621ece4ad060d2486cef509f932a9e9b897
+
 }
