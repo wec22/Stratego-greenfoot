@@ -13,6 +13,8 @@ public class Piece extends Actor
     private int rank;
     private GreenfootImage pieceImage;
     private boolean color;    
+    private boolean moving;
+    private boolean active;
     /**
      * Act - do whatever the Piece wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,11 +26,13 @@ public class Piece extends Actor
     {
         rank = number;
         color = side;
+        moving = false;
         if(side)
         {
+            active = true;
             switch(rank)
             {
-                 case(1):
+                case(1):
                         pieceImage = new GreenfootImage("red1.png");
                         setImage(pieceImage);
                         break;
@@ -36,7 +40,7 @@ public class Piece extends Actor
                         pieceImage = new GreenfootImage("red2.png");
                         setImage(pieceImage);
                         break;
-               case(3):
+                case(3):
                         pieceImage = new GreenfootImage("red3.png");
                         setImage(pieceImage);
                         break;
@@ -61,11 +65,12 @@ public class Piece extends Actor
         }
         else
         {
+            active = false;
             pieceImage = new GreenfootImage("blueBlank.png");
             setImage(pieceImage);
         }
     }
-    public int getColor()
+    public boolean getColor()
     {
         return color;
     }    
@@ -76,35 +81,49 @@ public class Piece extends Actor
     }
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this))
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        if(mouse==null) return;
+        if(((MyWorld)getWorld()).getTurn()==color)
         {
-            //move();
+            if(Greenfoot.mouseClicked(this))
+            {
+                moving = true;
+            }
+            else if(moving == true && Greenfoot.mouseClicked(null))
+            {
+                move(new Cell(mouse.getX(), mouse.getY()));
+            }
         }
     }
     public ArrayList<Cell> checkMoves()
     {
         ArrayList<Cell> moves = new ArrayList<Cell>();
-
-        Piece other = getObjectsAtOffset(0,1,Piece.class).get(0);
+        System.out.println("me:"+ this);
+        Piece other = (Piece)getOneObjectAtOffset(0,10,Piece.class);
+        System.out.println("other1:"+ other);
         if(other==null || other.getColor()!=color)
         {
-            moves.add(new Cell(0,1));
+            moves.add(new Cell(0+getX(),10+getY()));
         }
-        other = getObjectsAtOffset(0,-1,Piece.class).get(0);
+        other = (Piece)getOneObjectAtOffset(0,-10,Piece.class);
+                System.out.println("other2:"+ other);
         if(other==null || other.getColor()!=color)
         {
-            moves.add(new Cell(0,-1));
+            moves.add(new Cell(0+getX(),-10+getY()));
         }
-        other = getObjectsAtOffset(1,0,Piece.class).get(0);
+        other = (Piece)getOneObjectAtOffset(10,0,Piece.class);
+                System.out.println("other3:"+ other);
         if(other==null || other.getColor()!=color)
         {
-            moves.add(new Cell(1,0));
+            moves.add(new Cell(10+getX(),0+getY()));
         }
-        other = getObjectsAtOffset(-1,0,Piece.class).get(0);
+        other = (Piece)getOneObjectAtOffset(-10,0,Piece.class);
+                System.out.println("other89:"+ other);
         if(other==null || other.getColor()!=color)
         {
-            moves.add(new Cell(-1,0));
+            moves.add(new Cell(-10+getX(),0+getY()));
         }
+        System.out.println(moves);
         return moves;
     }
     public void move(Cell location)
@@ -112,9 +131,12 @@ public class Piece extends Actor
         //get possible moves
         ArrayList<Cell> moves = checkMoves();
         boolean valid = false;
+        System.out.println("location: "+location);
         for(Cell c : moves)
         {
-            if(c.x == location.x && c.y == location.y)
+            System.out.println("cell checking: "+c);
+            System.out.println(""+c.x/10 +"=="+location.x%10+"&&"+c.y%10+"=="+location.y%10);
+            if((c.x/10 == location.x/10) && (c.y/10 == location.y/10))
             {
                 valid = true;
                 break;
@@ -122,16 +144,17 @@ public class Piece extends Actor
         }
         if(valid)
         {
-            setLocation(location.x, location.y);
+            setLocation(10*(location.x/10)+5, 10*(location.y/10)+5);
             Piece enemy = (Piece) getOneObjectAtOffset(0,0,Piece.class);
             if(enemy!=null)
             {
                 fight(enemy);
             }
             ((MyWorld) getWorld()).changeTurns();
-            
+            moving = false;
         }
-        
+        else
+            moving = false;
         
     }
     public void fight(Piece other)
