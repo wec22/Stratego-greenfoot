@@ -1,0 +1,203 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files (x86)\Greenfoot\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-protected
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files (x86)\Greenfoot\lib\extensions\greenfoot.jar;C:\Program Files (x86)\Greenfoot\lib\bluejcore.jar;C:\Program Files (x86)\Greenfoot\lib\bluejeditor.jar;C:\Program Files (x86)\Greenfoot\lib\bluejext.jar;C:\Program Files (x86)\Greenfoot\lib\AppleJavaExtensions.jar;C:\Program Files (x86)\Greenfoot\lib\junit-4.11.jar;C:\Program Files (x86)\Greenfoot\lib\hamcrest-core-1.3.jar;C:\Program Files (x86)\Greenfoot\lib\bluej.jar;C:\Program Files (x86)\Greenfoot\lib\diffutils-1.2.1.jar;C:\Program Files (x86)\Greenfoot\lib\commons-httpclient-3.1.jar;C:\Program Files (x86)\Greenfoot\lib\commons-logging-api-1.1.2.jar;C:\Program Files (x86)\Greenfoot\lib\commons-codec-1.3.jar;C:\Program Files (x86)\Greenfoot\lib\jl1.0.1.jar;C:\Program Files (x86)\Greenfoot\lib\opencsv-2.3.jar;C:\Program Files (x86)\Greenfoot\lib\xom-1.2.9.jar;C:\Program Files (x86)\Greenfoot\lib\lang-stride.jar;C:\Program Files (x86)\Greenfoot\lib\guava-17.0.jar;C:\Program Files (x86)\Greenfoot\lib\javassist-3.18.0.jar;C:\Program Files (x86)\Greenfoot\lib\commons-vfs2-2.0.jar;C:\Program Files (x86)\Greenfoot\lib\httpclient-4.1.1.jar;C:\Program Files (x86)\Greenfoot\lib\httpcore-4.1.jar;C:\Program Files (x86)\Greenfoot\lib\httpmime-4.1.1.jar;C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego
+-d
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files (x86)\Greenfoot\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java...
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:18: error: illegal start of type
+<<<<<<< HEAD
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:18: error: ';' expected
+<<<<<<< HEAD
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:18: error: illegal start of type
+<<<<<<< HEAD
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:18: error: <identifier> expected
+<<<<<<< HEAD
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:18: error: ';' expected
+<<<<<<< HEAD
+       ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:19: error: illegal start of type
+=======
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:19: error: <identifier> expected
+=======
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:19: error: ';' expected
+=======
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:19: error: illegal start of type
+=======
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:19: error: <identifier> expected
+=======
+       ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:20: error: ';' expected
+    private int rank;
+           ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:20: error: <identifier> expected
+    private int rank;
+                    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:24: error: illegal start of type
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:24: error: ';' expected
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+   ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:24: error: illegal start of type
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:24: error: ';' expected
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+                                                ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:33: error: illegal start of type
+<<<<<<< HEAD
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:33: error: ';' expected
+<<<<<<< HEAD
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:33: error: illegal start of type
+<<<<<<< HEAD
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:33: error: <identifier> expected
+<<<<<<< HEAD
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:33: error: ';' expected
+<<<<<<< HEAD
+       ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:37: error: illegal start of expression
+=======
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:37: error: illegal start of expression
+=======
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:37: error: illegal start of expression
+=======
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:37: error: illegal start of expression
+=======
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:39: error: illegal start of expression
+    public int getRank()
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:39: error: ';' expected
+    public int getRank()
+                      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:42: error: illegal start of expression
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:42: error: illegal start of expression
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+   ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:42: error: illegal start of expression
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:42: error: ';' expected
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+                                                ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:44: error: illegal start of expression
+    public void act() 
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:44: error: illegal start of expression
+    public void act() 
+           ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:44: error: ';' expected
+    public void act() 
+                   ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:51: error: illegal start of expression
+    public ArrayList<Cell> checkMoves()
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:51: error: ';' expected
+    public ArrayList<Cell> checkMoves()
+                                     ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:77: error: illegal start of expression
+    public void move(Cell location)
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:77: error: illegal start of expression
+    public void move(Cell location)
+           ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:77: error: ';' expected
+    public void move(Cell location)
+                    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:77: error: ';' expected
+    public void move(Cell location)
+                                  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:104: error: illegal start of expression
+    public void fight(Piece other)
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:104: error: illegal start of expression
+    public void fight(Piece other)
+           ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:104: error: ';' expected
+    public void fight(Piece other)
+                     ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:104: error: ';' expected
+    public void fight(Piece other)
+                                 ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:142: error: illegal start of expression
+<<<<<<< HEAD
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:142: error: illegal start of expression
+<<<<<<< HEAD
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:142: error: illegal start of expression
+<<<<<<< HEAD
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:144: error: > expected
+}
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:145: error: illegal start of expression
+=======
+  ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:145: error: illegal start of expression
+=======
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:145: error: illegal start of expression
+=======
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:147: error: illegal start of expression
+    public boolean checkWinner(int defender)
+    ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:147: error: ';' expected
+    public boolean checkWinner(int defender)
+                              ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:147: error: ';' expected
+    public boolean checkWinner(int defender)
+                                           ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:150: error: illegal start of type
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:150: error: ';' expected
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+   ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:150: error: illegal start of type
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+      ^
+C:\Users\elica\Documents\school\ENGR 1110\Stratego-greenfoot\Stratego\Piece.java:150: error: reached end of file while parsing
+>>>>>>> e9f186d6054036268b84567b46e2a9fc439c37fe
+                                                ^
+58 errors

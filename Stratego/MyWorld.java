@@ -29,7 +29,8 @@ public class MyWorld extends World
          --------------*/
         orderedPair = getRandomLocationPair(SpawnLocationBoard);
         addObject(new Flag(11, true), (orderedPair/100), (orderedPair%100));//adds flag
-
+        addObject(new River(), 50, 50);
+        setPaintOrder(Piece.class, River.class, MyWorld.class);
         for(int i= 0; i < 6; i++)//add bombs
         {
             orderedPair = getRandomLocationPair(SpawnLocationBoard);
@@ -175,7 +176,8 @@ public class MyWorld extends World
             }
         }
         
-    }
+    }   
+
     public void changeTurns()
     {
         turn = !turn;
@@ -184,4 +186,5 @@ public class MyWorld extends World
     {
         return turn;
     }
+
 }
