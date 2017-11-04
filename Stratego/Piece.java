@@ -13,8 +13,10 @@ public class Piece extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int rank;
-    private boolean color;
     private GreenfootImage pieceImage;
+    private boolean color;    
+   
+    
     public Piece()
     {
     }
@@ -63,6 +65,12 @@ public class Piece extends Actor
             setImage(pieceImage);
         }
     }
+    
+    
+    public int getRank()
+    {
+        return rank;
+    }
     public void act() 
     {
         // Add your action code here.
@@ -72,5 +80,43 @@ public class Piece extends Actor
     }
     public void fight()
     {
+        Piece defendent = (Piece) getOneIntersectingObject(Piece.class);
+        switch (defendent.getRank())
+        {
+            case 0://Bomb
+            {
+                if(rank == 8)
+                {
+                    getWorld().removeObject(defendent);
+                    return;
+                }              
+            }
+            case 10://Spy
+            {
+                if(rank == 1)
+                {
+                    getWorld().removeObject(defendent);
+                    return;
+                }
+            }
+            case 11://Flag
+            {
+                Greenfoot.stop();
+            }
+            default://Every Other Case
+            {
+                if(checkWinner(defendent.getRank()))
+                    {
+                        getWorld().removeObject(defendent);
+                    }
+                    else
+                    {
+                        getWorld().removeObject(this);
+                    }
+            }
+        }       
     }
+    
+    public boolean checkWinner(int defender)
+    {return rank < defender ? true : false; }
 }
