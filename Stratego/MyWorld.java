@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.List;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -20,7 +20,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(100, 100, 10); 
-        
+        turn = true;
          /*--------------
          * createing pieces for each side
          * new pieceType(pieceNumber, Color)
@@ -181,6 +181,15 @@ public class MyWorld extends World
     public void changeTurns()
     {
         turn = !turn;
+        List<Piece> inWorld = getObjects(Piece.class);
+        for(Piece piece : inWorld)
+        {
+            if(piece.getColor())
+            {
+                piece.switchRedImage(turn);
+            }
+        }
+        
     }
     public boolean getTurn()
     {

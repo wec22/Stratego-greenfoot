@@ -98,32 +98,32 @@ public class Piece extends Actor
     public ArrayList<Cell> checkMoves()
     {
         ArrayList<Cell> moves = new ArrayList<Cell>();
-        System.out.println("me:"+ this);
+       // System.out.println("me:"+ this);
         Piece other = (Piece)getOneObjectAtOffset(0,10,Piece.class);
-        System.out.println("other1:"+ other);
+       // System.out.println("other1:"+ other);
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(0+getX(),10+getY()));
         }
         other = (Piece)getOneObjectAtOffset(0,-10,Piece.class);
-                System.out.println("other2:"+ other);
+              //  System.out.println("other2:"+ other);
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(0+getX(),-10+getY()));
         }
         other = (Piece)getOneObjectAtOffset(10,0,Piece.class);
-                System.out.println("other3:"+ other);
+                //System.out.println("other3:"+ other);
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(10+getX(),0+getY()));
         }
         other = (Piece)getOneObjectAtOffset(-10,0,Piece.class);
-                System.out.println("other89:"+ other);
+              //  System.out.println("other89:"+ other);
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(-10+getX(),0+getY()));
         }
-        System.out.println(moves);
+       // System.out.println(moves);
         return moves;
     }
     public void move(Cell location)
@@ -131,11 +131,11 @@ public class Piece extends Actor
         //get possible moves
         ArrayList<Cell> moves = checkMoves();
         boolean valid = false;
-        System.out.println("location: "+location);
+        //System.out.println("location: "+location);
         for(Cell c : moves)
         {
-            System.out.println("cell checking: "+c);
-            System.out.println(""+c.x/10 +"=="+location.x%10+"&&"+c.y%10+"=="+location.y%10);
+            //System.out.println("cell checking: "+c);
+           // System.out.println(""+c.x/10 +"=="+location.x%10+"&&"+c.y%10+"=="+location.y%10);
             if((c.x/10 == location.x/10) && (c.y/10 == location.y/10))
             {
                 valid = true;
@@ -150,7 +150,10 @@ public class Piece extends Actor
             {
                 fight(enemy);
             }
-            ((MyWorld) getWorld()).changeTurns();
+            //((MyWorld) getWorld()).changeTurns();
+            MyWorld  w = getWorldOfType(MyWorld.class);
+            w.changeTurns();
+            
             moving = false;
         }
         else
@@ -198,4 +201,131 @@ public class Piece extends Actor
 
     public boolean checkWinner(int defender)
     {return rank < defender ? true : false; }
+    
+    public void switchRedImage(boolean isTurn)
+    {
+        GreenfootImage newImage;
+        if(isTurn)
+        {
+            switch(rank)
+            {
+                case(1):
+                        newImage = new GreenfootImage("red1.png");
+                        setImage(newImage);
+                        break;
+                case(2):
+                        newImage = new GreenfootImage("red2.png");
+                        setImage(newImage);
+                        break;
+                case(3):
+                        newImage = new GreenfootImage("red3.png");
+                        setImage(newImage);
+                        break;
+                case(4):
+                        newImage = new GreenfootImage("red4.png");
+                        setImage(newImage);
+
+                case(5):
+                        newImage = new GreenfootImage("red5.png");
+                        setImage(newImage);
+                        break;
+                case(6):
+                        newImage = new GreenfootImage("red6.png");
+                        setImage(newImage);
+                        break;
+                case(7):
+                        newImage =new GreenfootImage("red7.png");
+                        setImage(pieceImage);
+                        break;
+                case(8):
+                        newImage =new GreenfootImage("red8.png");
+                        setImage(pieceImage);
+                        break;
+                case(9):
+                        newImage =new GreenfootImage("red9.png");
+                        setImage(pieceImage);
+                        break;
+                case(10):
+                        newImage =new GreenfootImage("red10.png");
+                        setImage(pieceImage);
+                        break;
+               case(11):
+                        newImage =new GreenfootImage("redFlag.png");
+                        setImage(pieceImage);
+                        break;
+              case(0):
+                        newImage =new GreenfootImage("redBomb.png");
+                        setImage(pieceImage);
+                        break;
+            }
+        }
+        else
+        {
+            newImage = new GreenfootImage("redBlank.png");
+            setImage(newImage);
+        }
+    }
+ public void switchBluedImage(boolean isTurn)
+    {
+        GreenfootImage newImage;
+        if(isTurn)
+        {
+            switch(rank)
+            {
+                case(1):
+                        newImage = new GreenfootImage("blue1.png");
+                        setImage(newImage);
+                        break;
+                case(2):
+                        newImage = new GreenfootImage("blue2.png");
+                        setImage(newImage);
+                        break;
+                case(3):
+                        newImage = new GreenfootImage("blue3.png");
+                        setImage(newImage);
+                        break;
+                case(4):
+                        newImage = new GreenfootImage("blue4.png");
+                        setImage(newImage);
+
+                case(5):
+                        newImage = new GreenfootImage("blue5.png");
+                        setImage(newImage);
+                        break;
+                case(6):
+                        newImage = new GreenfootImage("blue6.png");
+                        setImage(newImage);
+                        break;
+                case(7):
+                        newImage =new GreenfootImage("blue7.png");
+                        setImage(pieceImage);
+                        break;
+                case(8):
+                        newImage =new GreenfootImage("blue8.png");
+                        setImage(pieceImage);
+                        break;
+                case(9):
+                        newImage =new GreenfootImage("blue9.png");
+                        setImage(pieceImage);
+                        break;
+                case(10):
+                        newImage =new GreenfootImage("blue10.png");
+                        setImage(pieceImage);
+                        break;
+               case(11):
+                        newImage =new GreenfootImage("blueFlag.png");
+                        setImage(pieceImage);
+                        break;
+              case(0):
+                        newImage =new GreenfootImage("blueBomb.png");
+                        setImage(pieceImage);
+                        break;
+            }
+        }
+        else
+        {
+            newImage = new GreenfootImage("blueBomb.png");
+            setImage(newImage);
+        }
+    }
 }
