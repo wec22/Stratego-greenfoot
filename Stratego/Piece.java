@@ -250,7 +250,7 @@ public class Piece extends Actor
                         setImage(pieceImage);
                         break;
                case(11):
-                        newImage =new GreenfootImage("redFlag.png");
+                        newImage =new GreenfootImage("RedFlag.png");
                         setImage(pieceImage);
                         break;
               case(0):
@@ -265,7 +265,7 @@ public class Piece extends Actor
             setImage(newImage);
         }
     }
- public void switchBluedImage(boolean isTurn)
+ public void switchBlueImage(boolean isTurn)
     {
         GreenfootImage newImage;
         if(isTurn)

@@ -188,6 +188,8 @@ public class MyWorld extends World
             {
                 piece.switchRedImage(turn);
             }
+            else
+                piece.switchBlueImage(turn);
         }
         
     }
