@@ -163,6 +163,13 @@ public class Piece extends Actor
     public void fight(Piece other)
     {
         Piece defendent = (Piece) getOneIntersectingObject(Piece.class);
+        
+        if(rank == defendent.getRank())
+                {
+                    getWorld().removeObject(defendent);
+                    getWorld().removeObject(this);
+                    return;
+                }
         switch (defendent.getRank())
         {
             case 0://Bomb
@@ -187,6 +194,7 @@ public class Piece extends Actor
             }
             default://Every Other Case
             {
+                
                 if(checkWinner(defendent.getRank()))
                     {
                         getWorld().removeObject(defendent);
@@ -313,7 +321,7 @@ public class Piece extends Actor
                         setImage(pieceImage);
                         break;
                case(11):
-                        newImage =new GreenfootImage("blueFlag.png");
+                        newImage =new GreenfootImage("BlueFlag.png");
                         setImage(pieceImage);
                         break;
               case(0):
