@@ -268,7 +268,7 @@ public class Piece extends Actor
  public void switchBlueImage(boolean isTurn)
     {
         GreenfootImage newImage;
-        if(isTurn)
+        if(!    isTurn)
         {
             switch(rank)
             {
@@ -313,7 +313,7 @@ public class Piece extends Actor
                         setImage(pieceImage);
                         break;
                case(11):
-                        newImage =new GreenfootImage("blueFlag.png");
+                        newImage =new GreenfootImage("BlueFlag.png");
                         setImage(pieceImage);
                         break;
               case(0):
@@ -324,7 +324,7 @@ public class Piece extends Actor
         }
         else
         {
-            newImage = new GreenfootImage("blueBomb.png");
+            newImage = new GreenfootImage("blueBlank.png");
             setImage(newImage);
         }
     }
