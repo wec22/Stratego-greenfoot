@@ -47,6 +47,7 @@ public class Piece extends Actor
                 case(4):
                         pieceImage = new GreenfootImage("red4.png");
                         setImage(pieceImage);
+                        break;
 
                 case(5):
                         pieceImage = new GreenfootImage("red5.png");
