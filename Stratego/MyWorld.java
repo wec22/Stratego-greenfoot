@@ -181,15 +181,20 @@ public class MyWorld extends World
     public void changeTurns()
     {
         turn = !turn;
+        
         List<Piece> inWorld = getObjects(Piece.class);
         for(Piece piece : inWorld)
         {
+            
             if(piece.getColor())
             {
                 piece.switchRedImage(turn);
             }
             else
+            {
                 piece.switchBlueImage(turn);
+            }
+            
         }
         
     }
