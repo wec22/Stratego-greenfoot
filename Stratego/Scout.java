@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Scout here.
  * 
@@ -14,7 +14,7 @@ public class Scout extends Piece
      */
     GreenfootImage red;
     GreenfootImage blue;
-     public Scout()
+    public Scout()
     {
     }
     public Scout(int rank, boolean color)
@@ -26,8 +26,60 @@ public class Scout extends Piece
             setImage(red);
          
     }
-    public void act() 
+    public ArrayList<Cell> checkMoves()
     {
-        // Add your action code here.
-    }    
+        ArrayList<Cell> moves = new ArrayList<Cell>();
+        Piece other;
+        //check south
+        for(int i=1;10*i+getY()<1000;i++)
+        {
+            other = (Piece)getOneObjectAtOffset(0,10*i,Piece.class);
+            if(other==null)
+                moves.add(new Cell(getX(),10*i+getY()));
+            if(other!=null && other.getColor()!=color)
+            {
+                moves.add(new Cell(getX(),10*i+getY()));
+                break;
+            }
+        }
+        
+        //check north
+        for(int i=1;-10*i+getY()<0;i++)
+        {
+            other = (Piece)getOneObjectAtOffset(0,-10*i,Piece.class);
+            if(other==null)
+                moves.add(new Cell(getX(),-10*i+getY()));
+            if(other!=null && other.getColor()!=color)
+            {
+                moves.add(new Cell(getX(),-10*i+getY()));
+                break;
+            }
+        }
+        //check west
+        for(int i=1;10*i+getX()<1000;i++)
+        {
+            other = (Piece)getOneObjectAtOffset(10*i,0,Piece.class);
+            if(other==null)
+                moves.add(new Cell(10*i+getX(),getY()));
+            if(other!=null && other.getColor()!=color)
+            {
+                moves.add(new Cell(10*i+getX(),getY()));
+                break;
+            }
+        }
+        //check east
+        for(int i=1;-10*i+getX()<0;i++)
+        {
+            other = (Piece)getOneObjectAtOffset(-10*i,0,Piece.class);
+            if(other==null)
+                moves.add(new Cell(-10*i+getX(),getY()));
+            if(other!=null && other.getColor()!=color)
+            {
+                moves.add(new Cell(-10*i+getX(),getY()));
+                break;
+            }
+        }
+        System.out.print(moves+"\n");
+        return moves;
+    }
 }

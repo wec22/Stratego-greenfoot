@@ -12,7 +12,7 @@ public class Piece extends Actor
     
     private int rank;
     private GreenfootImage pieceImage;
-    private boolean color;    
+    protected boolean color;    
     private boolean moving;
     private boolean active;
     /**
