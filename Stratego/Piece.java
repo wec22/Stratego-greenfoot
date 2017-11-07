@@ -57,7 +57,7 @@ public class Piece extends Actor
                         setImage(pieceImage);
                         break;
                 case(7):
-                        pieceImage =new GreenfootImage("red7.png");
+                        pieceImage = new GreenfootImage("red7.png");
                         setImage(pieceImage);
                         break;
                 
@@ -224,6 +224,7 @@ public class Piece extends Actor
                 case(4):
                         newImage = new GreenfootImage("red4.png");
                         setImage(newImage);
+                        break;
 
                 case(5):
                         newImage = new GreenfootImage("red5.png");
@@ -235,27 +236,27 @@ public class Piece extends Actor
                         break;
                 case(7):
                         newImage =new GreenfootImage("red7.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(8):
                         newImage =new GreenfootImage("red8.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(9):
                         newImage =new GreenfootImage("red9.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(10):
-                        newImage =new GreenfootImage("red10.png");
-                        setImage(pieceImage);
+                        newImage =new GreenfootImage("redSpy.png");
+                        setImage(newImage);
                         break;
                case(11):
                         newImage =new GreenfootImage("RedFlag.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
               case(0):
                         newImage =new GreenfootImage("redBomb.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
             }
         }
@@ -267,8 +268,9 @@ public class Piece extends Actor
     }
  public void switchBlueImage(boolean isTurn)
     {
+        
         GreenfootImage newImage;
-        if(!    isTurn)
+        if(!isTurn)
         {
             switch(rank)
             {
@@ -287,6 +289,7 @@ public class Piece extends Actor
                 case(4):
                         newImage = new GreenfootImage("blue4.png");
                         setImage(newImage);
+                        break;
 
                 case(5):
                         newImage = new GreenfootImage("blue5.png");
@@ -298,28 +301,30 @@ public class Piece extends Actor
                         break;
                 case(7):
                         newImage =new GreenfootImage("blue7.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(8):
                         newImage =new GreenfootImage("blue8.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(9):
                         newImage =new GreenfootImage("blue9.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
                 case(10):
-                        newImage =new GreenfootImage("blue10.png");
-                        setImage(pieceImage);
+                        newImage =new GreenfootImage("blueSpy.png");
+                        setImage(newImage);
                         break;
                case(11):
                         newImage =new GreenfootImage("BlueFlag.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
               case(0):
                         newImage =new GreenfootImage("blueBomb.png");
-                        setImage(pieceImage);
+                        setImage(newImage);
                         break;
+              
+                        
             }
         }
         else
