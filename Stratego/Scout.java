@@ -79,7 +79,7 @@ public class Scout extends Piece
                 break;
             }
         }
-        System.out.print(moves+"\n");
+        //System.out.print(moves+"\n");
         return moves;
     }
 }
