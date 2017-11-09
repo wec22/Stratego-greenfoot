@@ -87,7 +87,7 @@ public class Scout extends Piece
             else if(other!=null && other.getColor()==color)
                 break;
         }
-        System.out.print(moves+"\n");
+        //System.out.print(moves+"\n");
         return moves;
     }
 }
