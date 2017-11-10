@@ -32,6 +32,8 @@ public class Piece extends Actor
             setRedImage(true);
         else
             setBlueImage(true);
+            
+       
     }
     public boolean getColor()
     {
@@ -54,8 +56,27 @@ public class Piece extends Actor
             }
             else if(moving == true && Greenfoot.mouseClicked(null))
             {
-                move(new Cell(mouse.getX(), mouse.getY()));
+                if(!isLake(mouse.getX(),mouse.getY()))
+                    move(new Cell(mouse.getX(), mouse.getY()));
             }
+        }
+    }
+    public static boolean isLake(int x, int y)
+    {
+        //lakes are at (2,4)(2,5)(3,4)(3,5) (6,4)(6,5)(7,4)(7,5)
+        x /= 10;
+        y /=10;
+        
+        switch(x)
+        {
+            case 2:
+            case 3:
+            case 6:
+            case 7:
+                if(y==4 || y==5)
+                    return true;
+            default:
+                return false;
         }
     }
     public ArrayList<Cell> checkMoves()
@@ -234,7 +255,7 @@ public class Piece extends Actor
             setImage(newImage);
         }
     }
- public void setBlueImage(boolean isTurn)
+    public void setBlueImage(boolean isTurn)
     {
         
         GreenfootImage newImage;
