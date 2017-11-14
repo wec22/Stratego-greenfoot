@@ -16,6 +16,7 @@ public class MyWorld extends World
     //temporary array that fills up with randomly placed soldiers
     private int orderedPair;
     private boolean SpawnLocationBoard[][] = new boolean[10][4];
+    private Phaser swapScreen = new Phaser();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,6 +31,7 @@ public class MyWorld extends World
         orderedPair = getRandomLocationPair(SpawnLocationBoard);
         addObject(new Flag(11, true), (orderedPair/100), (orderedPair%100));//adds flag
         addObject(new River(), 50, 50);
+        addObject(swapScreen, 49, 49);
         setPaintOrder(Piece.class, River.class, MyWorld.class);
         for(int i= 0; i < 6; i++)//add bombs
         {
@@ -196,7 +198,8 @@ public class MyWorld extends World
             }
             
         }
-        
+        setPaintOrder(Phaser.class, Piece.class, River.class, MyWorld.class);
+        swapScreen.swap();
     }
     public boolean getTurn()
     {
