@@ -114,10 +114,9 @@ public class Piece extends Actor
         //get possible moves
         ArrayList<Cell> moves = checkMoves();
         boolean valid = false;
-        
+        MyWorld  w = getWorldOfType(MyWorld.class);
         for(Cell c : moves)
         {
-            
             if((c.x/10 == location.x/10) && (c.y/10 == location.y/10))
             {
                 valid = true;
@@ -132,7 +131,6 @@ public class Piece extends Actor
             {
                 fight(enemy);
             }
-            MyWorld  w = getWorldOfType(MyWorld.class);
             w.changeTurns();
             
             moving = false;
