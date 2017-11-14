@@ -163,7 +163,7 @@ public class Piece extends Actor
             {
                 if(rank == 1)
                 {
-                    getWorld().removeObject(defendent);
+                    getWorld().removeObject(this);
                     return;
                 }
             }
