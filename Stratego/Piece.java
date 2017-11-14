@@ -14,7 +14,7 @@ public class Piece extends Actor
     private GreenfootImage pieceImage;
     protected boolean color;    
     private boolean moving;
-    private boolean active;
+    
     /**
      * Act - do whatever the Piece wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,49 +27,13 @@ public class Piece extends Actor
         rank = number;
         color = side;
         moving = false;
+       
         if(side)
-        {
-            active = true;
-            switch(rank)
-            {
-                case(1):
-                        pieceImage = new GreenfootImage("red1.png");
-                        setImage(pieceImage);
-                        break;
-                case(2):
-                        pieceImage = new GreenfootImage("red2.png");
-                        setImage(pieceImage);
-                        break;
-                case(3):
-                        pieceImage = new GreenfootImage("red3.png");
-                        setImage(pieceImage);
-                        break;
-                case(4):
-                        pieceImage = new GreenfootImage("red4.png");
-                        setImage(pieceImage);
-                        break;
-
-                case(5):
-                        pieceImage = new GreenfootImage("red5.png");
-                        setImage(pieceImage);
-                        break;
-                case(6):
-                        pieceImage = new GreenfootImage("red6.png");
-                        setImage(pieceImage);
-                        break;
-                case(7):
-                        pieceImage = new GreenfootImage("red7.png");
-                        setImage(pieceImage);
-                        break;
-                
-            }
-        }
+            setRedImage(true);
         else
-        {
-            active = false;
-            pieceImage = new GreenfootImage("blueBlank.png");
-            setImage(pieceImage);
-        }
+            setBlueImage(true);
+            
+       
     }
     public boolean getColor()
     {
@@ -92,39 +56,57 @@ public class Piece extends Actor
             }
             else if(moving == true && Greenfoot.mouseClicked(null))
             {
-                move(new Cell(mouse.getX(), mouse.getY()));
+                if(!isLake(mouse.getX(),mouse.getY()))
+                    move(new Cell(mouse.getX(), mouse.getY()));
             }
+        }
+    }
+    public static boolean isLake(int x, int y)
+    {
+        //lakes are at (2,4)(2,5)(3,4)(3,5) (6,4)(6,5)(7,4)(7,5)
+        x /= 10;
+        y /=10;
+        
+        switch(x)
+        {
+            case 2:
+            case 3:
+            case 6:
+            case 7:
+                if(y==4 || y==5)
+                    return true;
+            default:
+                return false;
         }
     }
     public ArrayList<Cell> checkMoves()
     {
         ArrayList<Cell> moves = new ArrayList<Cell>();
-       // System.out.println("me:"+ this);
+      
         Piece other = (Piece)getOneObjectAtOffset(0,10,Piece.class);
-       // System.out.println("other1:"+ other);
+      
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(0+getX(),10+getY()));
         }
         other = (Piece)getOneObjectAtOffset(0,-10,Piece.class);
-              //  System.out.println("other2:"+ other);
+              
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(0+getX(),-10+getY()));
         }
         other = (Piece)getOneObjectAtOffset(10,0,Piece.class);
-                //System.out.println("other3:"+ other);
+                
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(10+getX(),0+getY()));
         }
         other = (Piece)getOneObjectAtOffset(-10,0,Piece.class);
-              //  System.out.println("other89:"+ other);
+        
         if(other==null || other.getColor()!=color)
         {
             moves.add(new Cell(-10+getX(),0+getY()));
         }
-       // System.out.println(moves);
         return moves;
     }
     public void move(Cell location)
@@ -132,11 +114,10 @@ public class Piece extends Actor
         //get possible moves
         ArrayList<Cell> moves = checkMoves();
         boolean valid = false;
-        //System.out.println("location: "+location);
+        
         for(Cell c : moves)
         {
-            //System.out.println("cell checking: "+c);
-           // System.out.println(""+c.x/10 +"=="+location.x%10+"&&"+c.y%10+"=="+location.y%10);
+            
             if((c.x/10 == location.x/10) && (c.y/10 == location.y/10))
             {
                 valid = true;
@@ -151,7 +132,6 @@ public class Piece extends Actor
             {
                 fight(enemy);
             }
-            //((MyWorld) getWorld()).changeTurns();
             MyWorld  w = getWorldOfType(MyWorld.class);
             w.changeTurns();
             
@@ -211,7 +191,7 @@ public class Piece extends Actor
     public boolean checkWinner(int defender)
     {return rank < defender ? true : false; }
     
-    public void switchRedImage(boolean isTurn)
+    public void setRedImage(boolean isTurn)
     {
         GreenfootImage newImage;
         if(isTurn)
@@ -275,7 +255,7 @@ public class Piece extends Actor
             setImage(newImage);
         }
     }
- public void switchBlueImage(boolean isTurn)
+    public void setBlueImage(boolean isTurn)
     {
         
         GreenfootImage newImage;

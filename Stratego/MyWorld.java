@@ -51,7 +51,7 @@ public class MyWorld extends World
         for(int i = 0; i < 5; i++) // add miners
         {
             orderedPair = getRandomLocationPair(SpawnLocationBoard);
-            addObject(new Miner(8, true), (orderedPair/100), (orderedPair%100));
+            addObject(new Piece(8, true), (orderedPair/100), (orderedPair%100));
         }
         
         for(int i = 0; i < 4; i++)// add sergents
@@ -118,7 +118,7 @@ public class MyWorld extends World
         for(int i = 0; i < 5; i++) // add miners
         {
             orderedPair = getRandomLocationPair(SpawnLocationBoard);
-            addObject(new Miner(8, false), (orderedPair/100), (orderedPair%100)+60);
+            addObject(new Piece(8, false), (orderedPair/100), (orderedPair%100)+60);
         }
         
         for(int i = 0; i < 4; i++)// add sergents
@@ -190,11 +190,11 @@ public class MyWorld extends World
             
             if(piece.getColor())
             {
-                piece.switchRedImage(turn);
+                piece.setRedImage(turn);
             }
             else
             {
-                piece.switchBlueImage(turn);
+                piece.setBlueImage(turn);
             }
             
         }

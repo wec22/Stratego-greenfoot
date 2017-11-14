@@ -36,24 +36,28 @@ public class Scout extends Piece
             other = (Piece)getOneObjectAtOffset(0,10*i,Piece.class);
             if(other==null)
                 moves.add(new Cell(getX(),10*i+getY()));
-            if(other!=null && other.getColor()!=color)
+            else if(other!=null && other.getColor()!=color)
             {
                 moves.add(new Cell(getX(),10*i+getY()));
                 break;
             }
+            else if(other!=null && other.getColor()==color)
+                break;
         }
         
         //check north
-        for(int i=1;-10*i+getY()<0;i++)
+        for(int i=1;-10*i+getY()>0;i++)
         {
             other = (Piece)getOneObjectAtOffset(0,-10*i,Piece.class);
             if(other==null)
                 moves.add(new Cell(getX(),-10*i+getY()));
-            if(other!=null && other.getColor()!=color)
+            else if(other!=null && other.getColor()!=color)
             {
                 moves.add(new Cell(getX(),-10*i+getY()));
                 break;
             }
+            else if(other!=null && other.getColor()==color)
+                break;
         }
         //check west
         for(int i=1;10*i+getX()<1000;i++)
@@ -61,25 +65,29 @@ public class Scout extends Piece
             other = (Piece)getOneObjectAtOffset(10*i,0,Piece.class);
             if(other==null)
                 moves.add(new Cell(10*i+getX(),getY()));
-            if(other!=null && other.getColor()!=color)
+            else if(other!=null && other.getColor()!=color)
             {
                 moves.add(new Cell(10*i+getX(),getY()));
                 break;
             }
+            else if(other!=null && other.getColor()==color)
+                break;
         }
         //check east
-        for(int i=1;-10*i+getX()<0;i++)
+        for(int i=1;-10*i+getX()>0;i++)
         {
             other = (Piece)getOneObjectAtOffset(-10*i,0,Piece.class);
             if(other==null)
                 moves.add(new Cell(-10*i+getX(),getY()));
-            if(other!=null && other.getColor()!=color)
+            else if(other!=null && other.getColor()!=color)
             {
                 moves.add(new Cell(-10*i+getX(),getY()));
                 break;
             }
+            else if(other!=null && other.getColor()==color)
+                break;
         }
-        System.out.print(moves+"\n");
+        //System.out.print(moves+"\n");
         return moves;
     }
 }
