@@ -24,7 +24,7 @@ public class Phaser extends Actor
         // Add your action code here.\
         if(Greenfoot.isKeyDown("enter"))
         {
-            getWorld().setPaintOrder(Piece.class, River.class, MyWorld.class, Phaser.class);
+            getWorld().setPaintOrder(WinScreen.class, Piece.class, River.class, MyWorld.class, Phaser.class);
             on = false;
         }
        if(on)

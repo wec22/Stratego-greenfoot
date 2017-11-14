@@ -198,7 +198,7 @@ public class MyWorld extends World
             }
             
         }
-        setPaintOrder(Phaser.class, Piece.class, River.class, MyWorld.class);
+        setPaintOrder(WinScreen.class, Phaser.class, Piece.class, River.class, MyWorld.class);
         swapScreen.swap();
     }
     public boolean getTurn()

@@ -171,6 +171,7 @@ public class Piece extends Actor
             }
             case 11://Flag
             {
+                getWorld().addObject( new WinScreen(color), 49, 49);
                 Greenfoot.stop();
             }
             default://Every Other Case
