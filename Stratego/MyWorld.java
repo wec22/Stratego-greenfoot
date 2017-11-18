@@ -41,7 +41,7 @@ public class MyWorld extends World
         }
         
         orderedPair = getRandomLocationPair(SpawnLocationBoard);
-        addObject(new Spy(10, true), (orderedPair/100), (orderedPair%100)); //add spy
+        addObject(new Piece(10, true), (orderedPair/100), (orderedPair%100)); //add spy
         
         for(int i = 0; i < 8; i++) //add scouts
         {
@@ -108,7 +108,7 @@ public class MyWorld extends World
         }
         
         orderedPair = getRandomLocationPair(SpawnLocationBoard);
-        addObject(new Spy(10, false), (orderedPair/100), (orderedPair%100)+60); //add spy
+        addObject(new Piece(10, false), (orderedPair/100), (orderedPair%100)+60); //add spy
         
         for(int i = 0; i < 8; i++) //add scouts
         {
